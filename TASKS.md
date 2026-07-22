@@ -4,7 +4,7 @@
 
 Backlog for the `a11y-alttext-commons` good-deed project. Read alongside `PLAN.md` (same directory).
 
-## How these tasks map to Elyos
+## How these tasks map to Hee-Lee Oss
 
 Every task here becomes a **Task JSON** validated by `packages/schema/src/schemas.ts`. Field mapping:
 
@@ -257,8 +257,8 @@ channel is confirmed).
     "Aligns with WCAG 2.x SC 1.1.1 and is published, versioned, and licensed CC-BY-4.0."
   ],
   "resources": [
-    "C:\\code\\elyos\\planning\\projects\\a11y-alttext-commons\\PLAN.md",
-    "C:\\code\\elyos\\governance\\proposals\\a11y-alttext-commons.md",
+    "C:\\code\\hee-lee-oss\\planning\\projects\\a11y-alttext-commons\\PLAN.md",
+    "C:\\code\\hee-lee-oss\\governance\\proposals\\a11y-alttext-commons.md",
     "WCAG 2.x Success Criterion 1.1.1 (Non-text Content)"
   ],
   "output": "A versioned style-guide document (style-guide/alt-text-style-guide.md), CC-BY-4.0, covering alt-text rules, long-description rules, decorative-vs-informative, data-figure conventions, and sensitive-imagery handling.",

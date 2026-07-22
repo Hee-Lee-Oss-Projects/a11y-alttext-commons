@@ -221,7 +221,7 @@ alt-text commons for openly-licensed images*. The space splits into four cluster
 ## Solution approach & architecture
 
 This is a **content/data pipeline** project with supporting **adapter code**, run in the **donated
-lane**: a human runs their own agent interactively to draft descriptions; Elyos prepares the
+lane**: a human runs their own agent interactively to draft descriptions; Hee-Lee Oss prepares the
 per-image task workspace and opens the upstream PR. The CLI never runs an agent headless.
 
 **Pipeline (per image)**
@@ -280,7 +280,7 @@ per-image task workspace and opens the upstream PR. The CLI never runs an agent 
   decorative-vs-informative, charts/maps/data-figure conventions, sensitive-imagery handling).
 - `pipeline/` — selection, license verification, flagging (complexity/sensitivity/duplicate),
   and the per-image task-record schema.
-- `adapters/` (Elyos-conformant: all source/host-specific logic lives here) —
+- `adapters/` (Hee-Lee Oss-conformant: all source/host-specific logic lives here) —
   - `adapters/commons/` — Wikimedia Commons structured-data caption/description submission via the
     MediaWiki/Wikibase API, honouring community + bot policy.
   - `adapters/textbook-pr/` — open-textbook repo PR generation (locate the figure's source,
@@ -324,7 +324,7 @@ provenance         tool, model, date, reviewer
 - *Upstream-first, no parallel store.* We contribute into the host; we do not stand up a competing
   description database. The `records/` artifact is an audit/provenance log, not a re-publication.
 - *License match, not license override.* The description inherits the host's licensing expectation
-  so it can be legally merged there; we do not impose an Elyos license on upstream content.
+  so it can be legally merged there; we do not impose a Hee-Lee Oss license on upstream content.
 - *Human-in-the-loop is non-optional.* No description merges without human accuracy review; this is
   the difference between "helpful" and "confidently wrong." Stated as the project's named public
   invariant: **no AI-drafted description ships without human sign-off, ever.**
@@ -590,7 +590,7 @@ fan-out: at scale, **one image = one task**, drawn from a milestone-scoped batch
   that additive a11y PRs at the proposed cadence are welcome.
 - **GLAM open-access collections / IIIF endpoints** — source images and license metadata.
 - **License metadata sources** — SPDX identifiers; CC license deeds; host-provided license fields.
-- **Elyos platform pieces** — `packages/cli` (task workspace + PR prep, donated lane), the Task
+- **Hee-Lee Oss platform pieces** — `packages/cli` (task workspace + PR prep, donated lane), the Task
   schema (`packages/schema`), and `adapters/` for all host-specific code. The CLI never runs an
   agent headless and never authenticates a coding agent.
 
@@ -620,18 +620,18 @@ fan-out: at scale, **one image = one task**, drawn from a milestone-scoped batch
   touch external write APIs (Commons edits, repo PRs).
 - **Secrets handling.** Any host API tokens (MediaWiki, GitHub) are supplied via the human's own
   environment, never written into logs, receipts, records, or committed files (per CLAUDE.md). The
-  donated lane means the human authenticates with their own account; Elyos does not store agent
+  donated lane means the human authenticates with their own account; Hee-Lee Oss does not store agent
   credentials.
 - **PII / privacy.** No identification or private-attribute inference about individuals; exclude
   unclear-consent imagery; neutral observational descriptions only.
 - **Abuse / misuse prevention.** No mass unreviewed automated edits; honour rate limits and bot
-  policy; every merge is human-reviewed. Refuse and flag (per Elyos guardrails) any request to
+  policy; every merge is human-reviewed. Refuse and flag (per Hee-Lee Oss guardrails) any request to
   describe non-open media, to target/deceive, or to make high-stakes claims without expert review.
 
 ## Sustainability & maintenance
 
 - **Post-delivery ownership.** The descriptions live upstream in the host collections — they are
-  maintained by those communities once merged, which is the durable, non-Elyos-dependent outcome.
+  maintained by those communities once merged, which is the durable, non-Hee-Lee Oss-dependent outcome.
 - **Additive contributions only.** Contributions add a missing description; they never overwrite an
   existing one. If a host later edits or reverts a contributed description, that is the community's
   prerogative — the provenance log records the original contribution and its final disposition, and
@@ -699,10 +699,10 @@ Sibling project ideas (perpendicular, reuse this pipeline): `caption-commons` (A
 
 ## References
 
-- `C:\code\elyos\CLAUDE.md` — Elyos work rules, lanes, quality bar, refusal guardrails.
-- `C:\code\elyos\docs\good-deed-definition.md` — good-deed criteria and risk tiers.
-- `C:\code\elyos\packages\schema\src\schemas.ts` — Task JSON schema.
-- `C:\code\elyos\governance\proposals\a11y-alttext-commons.md` — originating proposal.
+- `C:\code\hee-lee-oss\CLAUDE.md` — Hee-Lee Oss work rules, lanes, quality bar, refusal guardrails.
+- `C:\code\hee-lee-oss\docs\good-deed-definition.md` — good-deed criteria and risk tiers.
+- `C:\code\hee-lee-oss\packages\schema\src\schemas.ts` — Task JSON schema.
+- `C:\code\hee-lee-oss\governance\proposals\a11y-alttext-commons.md` — originating proposal.
 - WCAG 2.x Success Criterion 1.1.1 (Non-text Content) — text-alternative requirement.
 - Creative Commons license suite (CC-BY, CC-BY-SA, CC0) and Public Domain.
 - Wikimedia Commons structured data (captions / depicts) and MediaWiki/Wikibase API + bot policy.
