@@ -9,7 +9,7 @@ millions of small, reviewable tasks.
 
 **Definition of shipped:** Reviewed descriptions merged upstream into open collections (Commons structured data, open textbooks).
 
-This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
+This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/HeeLeeOss/hee-lee-oss-downloads
 
 ## Planning
 - [PROPOSAL.md](./PROPOSAL.md) — why this qualifies as a good deed (Good Deed Definition)
@@ -20,9 +20,9 @@ This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it wit
 ## Contribute
 ```bash
 hee-lee-oss browse
-hee-lee-oss pull --task-file tasks/a11y-alttext-commons-style-001.json --repo Hee-Lee-Oss-Projects/a11y-alttext-commons
+hee-lee-oss pull --task-file tasks/a11y-alttext-commons-style-001.json --repo HeeLeeOss/a11y-alttext-commons
 # do the work with your own agent, then:
-hee-lee-oss submit a11y-alttext-commons-style-001 --repo Hee-Lee-Oss-Projects/a11y-alttext-commons
+hee-lee-oss submit a11y-alttext-commons-style-001 --repo HeeLeeOss/a11y-alttext-commons
 ```
 
 ## Licensing & review
